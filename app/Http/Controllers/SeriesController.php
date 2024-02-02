@@ -6,9 +6,21 @@ use Illuminate\Http\Request;
 
 class SeriesController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        
+        $series = [
+            'um',
+            'oids',
+            'tres'
+        ];
+
+        $teste = 1;
+
+        return view('pages.series.index')
+            ->with([
+                'series' => $series,
+                'teste' => $teste,
+            ]);
     }
 
     public function create()
